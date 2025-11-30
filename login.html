@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Ulearnix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        <div class="auth-box">
+            
+            <div class="auth-left">
+                <h2>Welcome back!</h2>
+                <p>Start your learning journey with Ulearnix.</p>
+                <img src="https://cdni.iconscout.com/illustration/premium/thumb/login-3305943-2757111.png" alt="Login Art">
+            </div>
+
+            <div class="auth-right">
+                <div class="logo-text">
+                    <i class="ri-graduation-cap-fill"></i> Ulearnix
+                </div>
+
+                <form id="login-form" onsubmit="goToDashboard(event)">
+                    <h3>Log In</h3>
+                    <div class="input-group">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="ri-lock-2-line"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Log In</button>
+                    <p class="switch-text">Don't have an account? <span onclick="toggleAuth('signup')">Sign Up</span></p>
+                </form>
+
+                <form id="signup-form" style="display: none;" onsubmit="goToDashboard(event)">
+                    <h3>Sign Up</h3>
+                    <div class="input-group">
+                        <i class="ri-user-line"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="ri-mail-line"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="ri-lock-2-line"></i>
+                        <input type="password" placeholder="Create Password" required>
+                    </div>
+                    <button type="submit" class="btn-auth">Sign Up</button>
+                    <p class="switch-text">Already have an account? <span onclick="toggleAuth('login')">Log In</span></p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
